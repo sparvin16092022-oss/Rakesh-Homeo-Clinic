@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treatment Records | Rakesh Homeo Clinic</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🩺 Rakesh Homeo Clinic</h1>
+    <nav>
+      <a href="index.html">🏠 Dashboard</a>
+      <a href="patients.html">🧍 Patients</a>
+      <a href="medicine.html">💊 Medicines</a>
+      <a href="treatments.html" class="active">🩺 Treatments</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========================= -->
+    <!-- ADD NEW TREATMENT FORM -->
+    <!-- ========================= -->
+    <section class="card">
+      <h2>Add Treatment Record</h2>
+      <form id="treatmentForm" class="form">
+        <div class="form-group">
+          <label for="treatPatientName">Patient Name:</label>
+          <input type="text" id="treatPatientName" placeholder="Enter patient name" required />
+        </div>
+        <div class="form-group">
+          <label for="treatDate">Date:</label>
+          <input type="date" id="treatDate" />
+        </div>
+        <div class="form-group">
+          <label for="treatMedicine">Medicine Prescribed:</label>
+          <input type="text" id="treatMedicine" placeholder="Enter medicine name" />
+        </div>
+        <div class="form-group">
+          <label for="treatDetails">Treatment Details:</label>
+          <textarea id="treatDetails" rows="4" placeholder="Enter symptoms, diagnosis, dosage, etc." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">💾 Save Treatment</button>
+      </form>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SEARCH + SORT + EXPORT -->
+    <!-- ========================= -->
+    <section class="card">
+      <div class="header-actions">
+        <h2>All Treatment Records</h2>
+        <div class="action-row">
+          <input
+            type="text"
+            id="searchTreatment"
+            placeholder="🔍 Search by patient name..."
+          />
+          <select id="sortTreatment">
+            <option value="latest">Sort: Latest</option>
+            <option value="oldest">Sort: Oldest</option>
+            <option value="name">Sort: A–Z</option>
+          </select>
+          <button id="exportPDF" class="btn-secondary">⬇️ Export PDF</button>
+        </div>
+      </div>
+      <div id="treatmentList" class="list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Rakesh Homeo Clinic — All Rights Reserved</p>
+  </footer>
+
+  <!-- PDF LIBRARY + SCRIPT -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicines | Rakesh Homeo Clinic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Medicine Stock</h1>
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="patients.html">🧑‍⚕️ Patients</a>
+    <a href="treatments.html">💊 Treatments</a>
+    <a href="medicine.html" class="active">🏪 Medicines</a>
+  </nav>
+
+  <main class="main fade-in">
+    <section class="card">
+      <h2>Add Medicine</h2>
+      <form id="medicineForm" class="form">
+        <input type="text" id="medicineName" placeholder="Medicine Name" required>
+        <input type="text" id="medicineStock" placeholder="Stock Quantity">
+        <textarea id="medicineNote" placeholder="Notes (optional)"></textarea>
+        <button type="submit" class="btn-primary">💾 Save Medicine</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Search Medicines</h2>
+      <input type="text" id="searchMedicine" placeholder="Search by name...">
+    </section>
+
+    <section class="card">
+      <h2>All Medicines</h2>
+      <div id="medicineList" class="list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Rakesh Homeo Clinic</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

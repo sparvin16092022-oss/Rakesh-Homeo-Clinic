@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patients | Rakesh Homeo Clinic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Patient Management</h1>
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="patients.html" class="active">🧑‍⚕️ Patients</a>
+    <a href="treatments.html">💊 Treatments</a>
+    <a href="medicine.html">🏪 Medicines</a>
+  </nav>
+
+  <main class="main fade-in">
+    <section class="card">
+      <h2>Add New Patient</h2>
+      <form id="patientForm" class="form">
+        <input type="text" id="patientName" placeholder="Patient Name" required>
+        <input type="number" id="patientAge" placeholder="Age">
+        <input type="text" id="patientContact" placeholder="Contact Number">
+        <button type="submit" class="btn-primary">💾 Save Patient</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Search Patients</h2>
+      <input type="text" id="searchPatient" placeholder="Search by name...">
+    </section>
+
+    <section class="card">
+      <h2>All Patients</h2>
+      <div id="patientList" class="list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Rakesh Homeo Clinic</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
